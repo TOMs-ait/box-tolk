@@ -10,5 +10,5 @@ script: |
   sudo apt-get update -y
   sudo apt-get install node
   gem install rake -v 10.3.2 --no-doc --no-ri
-  npm install -g istanbul
-  npm install -g phantomjs
+  sudo npm install -g istanbul
+  sudo npm install -g phantomjs
