@@ -8,7 +8,8 @@ keywords:
   - rails
 script: |
   sudo apt-get update -y
-  sudo apt-get install nodejs npm
+  sudo apt-get install nodejs
+  sudo apt-get install npm
   gem install rake -v 10.3.2 --no-doc --no-ri
   sudo npm install -g istanbul
   sudo npm install -g phantomjs
