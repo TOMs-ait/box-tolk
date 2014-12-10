@@ -8,7 +8,7 @@ keywords:
   - rails
 script: |
   sudo apt-get update -y
-  sudo apt-get install -y nodejs
+  sudo apt-get install -y nodejs nodejs-dev
   sudo apt-get install -y npm
   gem install rake -v 10.3.2 --no-doc --no-ri
   sudo npm install -g istanbul
