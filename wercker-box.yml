@@ -1,4 +1,4 @@
-name: box-talk
+name: box-toms-tolk
 version: 0.0.1
 inherits: wercker/rvm@2.0.0
 type: main
