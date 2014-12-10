@@ -1,0 +1,14 @@
+name: box-talk
+version: 0.0.1
+inherits: wercker/rvm@2.0.0
+type: main
+platform: ubuntu@12.04
+description: TOMs BOX for TOLK
+keywords:
+  - rails
+script: |
+  sudo apt-get update -y
+  sudo apt-get install node
+  gem install rake -v 10.3.2 --no-doc --no-ri
+  npm install -g istanbul
+  npm install -g phantomjs
