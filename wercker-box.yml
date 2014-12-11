@@ -7,10 +7,9 @@ description: TOMs BOX for TOLK
 keywords:
   - rails
 script: |
+  sudo apt-get install -y python-software-properties
+  sudo apt-add-repository -y ppa:chris-lea/node.js
   sudo apt-get update -y
-  sudo apt-get install python-software-properties
-  sudo apt-add-repository ppa:chris-lea/node.js
-  sudo apt-get update
   sudo apt-get install -y nodejs
   sudo apt-get install -y npm
   gem install rake -v 10.3.2 --no-doc --no-ri
