@@ -12,10 +12,10 @@ script: |
   sudo apt-get -y upgrade
   apt-get install -y build-essential git curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev sqlite3 libsqlite3-dev nodejs
   curl -O http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p598.tar.gz &&
-  tar -zxvf ruby-2.0.0-p598.tar.gz && \
-  cd ruby-2.0.0 && \
-  ./configure --disable-install-doc && \
-  make && \
+  tar -zxvf ruby-2.0.0-p598.tar.gz
+  cd ruby-2.0.0
+  ./configure --disable-install-doc
+  make
   make install
   gem install bundler
   sudo npm install -g istanbul
