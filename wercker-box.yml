@@ -1,6 +1,6 @@
 name: box-toms-tolk
-version: 0.0.5
-inherits: wercker/rvm@2.0.0
+version: 0.0.6
+inherits: wercker/default
 type: main
 platform: ubuntu@12.04
 description: TOMs BOX for TOLK
@@ -8,13 +8,15 @@ keywords:
   - rails
 script: |
   sudo apt-get install -y python-software-properties python g++ make
-  sudo apt-add-repository -y ppa:chris-lea/node.js
-  sudo apt-get update -y
-  sudo apt-get remove -y --purge node
-  sudo apt-get clean -y
-  sudo apt-get install -y nodejs
-  gem install rake -v 10.3.2 --no-doc --no-ri
+  sudo apt-get -y update
+  sudo apt-get -y upgrade
+  apt-get install -y build-essential git curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev sqlite3 libsqlite3-dev nodejs
+  curl -O http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p598.tar.gz &&
+  tar -zxvf ruby-2.0.0-p598.tar.gz && \
+  cd ruby-2.0.0 && \
+  ./configure --disable-install-doc && \
+  make && \
+  make install
+  gem install bundler
   sudo npm install -g istanbul
   sudo npm install -g phantomjs
-  node -v
-  npm -v
